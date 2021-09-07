@@ -1,0 +1,160 @@
+<!-- Archivo HTML de Hugo Farías y Tomás Clavijo -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Compras compartidas</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+  <script src="js/clasesComprasCompartidas.js"></script>
+  <script src="js/comprasCompartidas.js"></script>
+</head>
+<body>
+  <a id="idTope"></a>
+  <!-- ENCABEZADO -->
+  <header id="idHeaderGrande">
+    <img src="img/titulo.jpg" alt="Compras Compartidas">
+  </header>
+  <header id="idHeaderCorto">
+    <img src="img/titulocorto.jpg" alt="Compras compartidas">
+  </header>
+  <!-- BARRA DE NAVEGACIÓN -->
+  <nav>
+    <ul>
+      <li>
+        <a href="#idPersonas">
+          <img src="img/usuario.jpg" alt="Usuario" title="Dirígete al apartado de personas">
+        </a>
+      </li>
+      <li>
+        <a href="#idCompras">
+          <img src="img/compras.jpg" alt="Compras" title="Dirígete al apartado de compras">
+        </a>
+      </li>
+      <li>
+        <a href="#idConsultas">
+          <img src="img/consultas.jpg" alt="Consultas" title="Dirígete al apartado de consultas">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/" target="_blank">
+          <img src="img/instagram.jpg" alt="Instagram" title="Dirígete a Instagram">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/" target="_blank">
+          <img src="img/facebook.jpg" alt="Facebook" title="Dirígete a Facebook">
+        </a>
+      </li>
+      <li>
+        <a href="https://uy.linkedin.com/" target="_blank">
+          <img src="img/linkedin.jpg" alt="LinkedIn" title="Dirígete a LinkedIn">
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!--  APARTADO DE PERSONAS -->
+  <section>
+    <a id="idPersonas"></a>
+    <h2>Personas</h2>
+    <h3>Registro</h3>
+    <form id="idFormulario">
+      <label for="idNombre">Nombre:</label>
+      <input class="ingreso" type="text" id="idNombre" placeholder="Nombre" maxlength="20" required>
+      <label for="idSeccion">Sección:</label>
+      <input class="ingreso" type="number" id="idSeccion" placeholder="sección" max="8" min="1" required>
+      <label for="idMail">Mail:</label>
+      <input class="ingreso" type="email" id="idMail" placeholder="mail" required>
+      <br>
+      <br>
+      <input class="boton" type="button" id="idBotonPersona" value="Agregar">
+    </form>
+    <h3>Visualización</h3>
+    <ul id="idLista" >
+    </ul>
+    <a href="#idTope">
+      <img src="img/flecha.jpg" alt="flecha" title="Dirígete al tope de la página">
+    </a>
+  </section>
+  <!--  APARTADO DE COMPRAS -->
+  <section>
+    <a id="idCompras"></a>
+    <h2>Compras</h2>
+    <h3>Registro</h3>
+    <form id="idFormularioRegistro">
+      <label>Hecha por:</label>
+      <select id="idSelect">
+        <option>Persona</option>
+      </select>
+      <label for="idDescripcion">Descripción:</label>
+      <input class="ingreso" type="text" id="idDescripcion" placeholder="Descripción" maxlength="40" required>
+      <label for="idMonto">Monto:</label>
+      <input class="ingreso" type="text" id="idMonto" required>
+      <br>
+      <br>
+      Corresponde a:
+      <div id="idCheckbox"></div>
+      <br>
+      <input class="boton" type="button" id="idBotonTabla" value="Agregar">
+    </form>
+    <h3>Reintegro</h3>
+    <label>Se reintegra la compra</label>
+    <select id="idSelectTres"></select>
+    <br>
+    <br>
+    <input class="boton" type="button" id="idBotonReintegro" value="Reintegro">
+    <br>
+    <h3>Visualización</h3>
+    <p>
+      Orden:
+      <input type="radio" name="orden" id="idRadioNumero" checked>
+      <label for="idRadioNumero">número</label>
+      <input type="radio" name="orden" id="idRadioNombre">
+      <label for="idRadioNombre">nombre</label>
+    </p>
+    <table id="idTabla">
+    </table>
+    <br>
+    <a href="#idTope">
+      <img src="img/flecha.jpg" alt="flecha" title="Dirígete al tope de la página">
+    </a>
+  </section>
+  <!--  APARTADO DE CONSULTAS -->
+  <section>
+    <a id="idConsultas"></a>
+    <h2>Consultas</h2>
+    <h3>Pagos/Cobros pendientes por persona</h3>
+    <label>Persona:</label>
+    <select id="idSelectDos">
+      <option>Persona</option>
+    </select>
+    <input class="boton" type="button" name="Consultar Totales" value="Consultar Totales" id="idBotonConsulta">
+    <p id="idComprasParticipantes"></p>
+    <p id="idComprasResponsables"></p>
+    <h3>Descripción</h3>
+    <form id="idFormularioDescripcion">
+    <label for="idBusqueda">Palabra a buscar:</label>
+    <input class="ingreso" type="text" id="idBusqueda" required>
+    <button class="boton" type="button" id="idBotonDescripcion">Consultar compras</button>
+    </form>
+    <div id="idHeaderResultado"></div>
+    <ul id="idListaDescripcion">
+    </ul>
+    <h3>Gráfica</h3>
+    <p>
+      Se muestra canitdad de compras totales por rango de $100 (0-99, 100-199, etc.)      
+    </p>
+    <input class="boton" type="button" value="Graficar" id="idBotonGraficar">
+    <div id="idGrafica"></div>
+    <a href="#idTope">
+      <img src="img/flecha.jpg" alt="flecha" title="Dirígete al tope de la página">
+    </a>
+  </section>
+  <br>
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    Obligatorio de Programación I - 1er semestre 2020 - Realizado por: Hugo Farías y Tomás Clavijo
+  </footer>
+</body>
+</html>

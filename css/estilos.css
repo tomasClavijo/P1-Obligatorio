@@ -1,0 +1,97 @@
+/* Archivo CSS de Hugo Farías y Tomás Clavijo */
+
+*{
+  font-family: sans-serif;
+}
+@media screen and (max-width: 600px) {
+  #idHeaderGrande {
+    display: none;
+  }
+  #idHeaderCorto {
+    display: absolute;
+  }
+}
+@media screen and (min-width: 601px) {
+  #idHeaderCorto {
+    display: none;
+  }
+  #idHeaderGrande {
+    display: absolute;
+  }
+}
+header img{
+  border-radius: 14px;
+  width: 480px;
+}
+nav{
+  background-color: blue;
+  border-radius: 35px;
+}
+nav ul{
+  list-style: none;
+}
+nav li{
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: 6px;
+  margin-bottom: 3px;
+}
+nav a img{
+  border-radius: 20px;
+  width: 27px;
+  height: 27px;
+}
+.ingreso{
+  border-radius: 20px;
+  border-style: solid;
+  border-right-color: #ebeee8;
+  border-bottom-color: #ebeee8;
+  border-top-color: #9a9a9a;
+  border-left-color: #9a9a9a;
+}
+.boton{
+  border-radius: 20px;
+  border-style: solid;
+  border-top-color: #ebeee8;
+  border-left-color: #ebeee8;
+  border-bottom-color: #9a9a9a;
+  border-right-color: #9a9a9a;
+}
+section a img{
+  width: 25px;
+  border-radius: 100px;
+  border-style: solid;
+  border-color: #b9b9ba;
+  border-width: 2px;
+}
+span{
+  color: #ed5252;
+  font-weight: bold;
+}
+th, td{
+  border: 1px;
+  border-style: solid;
+  border-color: rgba(189, 189, 189, 0.19);
+  text-align: center;
+  align-items: center;
+  padding: 10px 10px 10px 10px;
+}
+table{
+  border: 1px;
+  border-style: solid;
+  border-color: rgba(189, 189, 189, 0.19);
+}
+select{
+  border-radius: 20px;
+}
+section{
+  background-color: beige;
+  border-radius: 20px;
+  padding-left: 50px;
+}
+footer{
+  background-color: #e5e610;
+  text-align: center;
+  border-radius: 20px;
+  font-weight: bold;
+}
